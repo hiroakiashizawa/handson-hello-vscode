@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<ul>
+<li><a href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%91%E3%83%AC%E3%83%83%E3%83%88%E3%81%8B%E3%82%89%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%9D%E3%81%86">拡張機能をインストールして、コマンドパレットから呼び出そう</a>
+<ul>
+<li><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%91%E3%83%AC%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">コマンドパレットを使ってみよう</a></li>
+<li><a href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%82%88%E3%81%86">拡張機能をインストールしよう</a></li>
+<li><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86">インストールした拡張機能を確認しよう</a></li>
+<li><a href="#%E8%AA%B2%E9%A1%8C-1">課題 1</a></li>
+<li><a href="#%E8%AA%B2%E9%A1%8C-2">課題 2</a></li>
+<li><a href="#%E8%AA%B2%E9%A1%8C-3">課題 3</a># 拡張機能をインストールして、コマンドパレットから呼び出そう</li>
+</ul>
+</li>
+</ul>
+<h2 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%91%E3%83%AC%E3%83%83%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">コマンドパレットを使ってみよう</h2>
+<p>VS Code では、画面を操作する他に、<code>コマンドパレット</code>という、コマンドを呼び出して実行する機能があります。
+おおよそほとんどの VS Code の機能はコマンドとして登録されており、このコマンドパレットを通じて実行できます。</p>
+<p>コマンドパレットを呼び出すには、F1 キー、もしくは、macOS: Cmd+Shift+P、Windows・Linux: Ctrl+Shift+P を押します。</p>
+<p><img src="img/command_palette.png" alt=""></p>
+<p>コマンドパレットでは、あいまい検索を行うことができます。
+コマンドを正確に覚えていなくても、単語を入力して絞り込み、選択することができます。
+この入力は、日本語でも、英語でも行うことができます</p>
+<p><strong>（例）git の stash 機能の名前を忘れたため、「退避」と入力した場合</strong></p>
+<p><img src="img/stash.png" alt=""></p>
+<h2 id="%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%82%88%E3%81%86">拡張機能をインストールしよう</h2>
+<p>VSCode Marketplace には数多くの拡張機能が公開されており、インストールすることで VS Code でできることを増やします。
+多くの拡張機能では、インストールによりコマンドパレットに新しいコマンドが追加されたり、VS Code の機能と連携して動作します。</p>
+<blockquote>
+<p><a href="https://marketplace.visualstudio.com/vscode">VSCode Marketplace https://marketplace.visualstudio.com/vscode</a></p>
+</blockquote>
+<p>マークダウンテキストをフォーマット（整形）することができる拡張機能 Prettier をインストールする手順は以下のとおりです。</p>
+<p><img src="img/install_prettier.png" alt=""></p>
+<ul>
+<li>アクティビティーバーの拡張機能(1)をクリック</li>
+<li>サイドバーのキーワード入力欄(2)に、&quot;prettier&quot;と入力</li>
+<li>サイドバーの検索結果から、&quot;Prettier&quot;をクリック(3)</li>
+<li>エディタ中に拡張機能の解説ページが開かれます</li>
+<li>サイドバーもしくは、エディタ中の解説ページ中の&quot;インストール&quot;(4)をクリック</li>
+</ul>
+<p>インストール後は拡張機能の表示が以下のようになります。
+（サイドバー中には歯車マークが表示され、エディタ中の解説ページには&quot;アンインストール&quot;のボタンが登場します）</p>
+<p><img src="img/prettier_installed.png" alt=""></p>
+<p>Prettier は、VS Code の標準コマンド <code>ドキュメントのフォーマット(Format Document)</code> と連動します。
+マークダウンファイルでこのコマンドを実行すると、 Prettier を利用してドキュメントのフォーマットが実行されてます。</p>
+<p>例えば、マークダウン中に 2 行以上の改行のみの行がある場合に 1 行に詰めたり、見出しの<code>## 見出しテキスト</code>のうち<code>##</code> と見出しのテキストの間が 2 個以上のスペースがある場合に 1 個に詰めたりします。</p>
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86">インストールした拡張機能を確認しよう</h2>
+<p>インストールされている拡張機能の一覧は、アクティビティーバーを拡張機能を選択した後に、キーワードを入力していない時にサイドバーに表示されます。</p>
+<p><img src="img/installed_extensions.png" alt=""></p>
+<p>拡張機能を削除するには、削除したい拡張機能の右側の歯車アイコンをクリックし、&quot;アンインストール&quot;をクリックします。</p>
+<p><img src="img/uninstall.png" alt=""></p>
+<h2 id="%E8%AA%B2%E9%A1%8C-1">課題 1</h2>
+<p>拡張機能 Prettier をインストールしてください。</p>
+<p>Prettier を使って、Topic 2 で作成したマークダウンをフォーマットを行ってください。</p>
+<p>フォーマットが行われたことを確認するため、一度意図的に改行の数を増やしていただき、コマンドを実行してフォーマットによって改行が詰められることを確認いただけると良いと思います。</p>
+<p>ヒント: フォーマットを実行したときに、複数のフォーマットプロバイダの選択が求められることがあります。フォーマットに関する複数の拡張機能をインストールした際に表示されます。ここでは、<code>Prettier</code> を選択してください。</p>
+<h2 id="%E8%AA%B2%E9%A1%8C-2">課題 2</h2>
+<p>マークダウンの編集に役立つ機能を多く持っている拡張機能 &quot;Markdown All in One&quot; があります。</p>
+<p><img src="img/markdown_all_in_one.png" alt=""></p>
+<p>この拡張機能をインストールすると、<code>Markdown All in One: 目次(TOC)の作成（Create Table of Contents）</code> というコマンドがコマンドパレットに追加されます。</p>
+<p>topic4/README.md を開いて、このコマンドを実行して、目次を追加してください。</p>
+<p><img src="img/toc_inserted.png" alt=""></p>
+<h2 id="%E8%AA%B2%E9%A1%8C-3">課題 3</h2>
+<p>マークダウンを PDF に変換する拡張機能 &quot;Markdown PDF&quot; があります。</p>
+<p><img src="img/markdown_pdf.png" alt=""></p>
+<p>この拡張機能をインストールし、topic4/README.md を PDF に変換してください。</p>
+<p>ヒント: 拡張機能をインストールして追加されるコマンドの多くは、コマンド中に拡張機能の名前を含んでいます。コマンドパレットで拡張機能の名前を入力すると、その拡張機能で追加されたコマンドを見つけることができます。</p>
+<p>この機能を使って PDF を作成すると、マークダウンと同じ名前の PDF ファイルが作られます。
+エクスプローラービュー中に PDF ファイルがあることが確認できると思います。
+VS Code の標準機能では PDF を表示することはできません。
+エクスプローラービューでは、ファイルを右クリックして、macOS: <code>Finder で開く</code>、Windows: <code>Explorer で開く</code>、Linux: <code>このアイテムをフォルダーで開く</code> を選択すると、そのファイルのフォルダーを表示することができます。</p>
+<p><img src="img/pdf_in_explorer_view.png" alt=""></p>
+<p>ここから Adobe Reader など他のソフトウェアを使って PDF を表示してみてください。</p>
+<p><img src="img/pdf.png" alt=""></p>
+
+</body>
+</html>

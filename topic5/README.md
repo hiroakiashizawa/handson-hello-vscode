@@ -67,8 +67,8 @@ VS Code では、コードやテキストを検査して、コンパイルエラ
 ```markdown
 # スペルミスしているテキスト
 
-- Bisual Studio Code
-- Visual Studio Vode
+- Visual Studio Code
+- Visual Studio Code
 ```
 
 以下の 3 つを確認してください。

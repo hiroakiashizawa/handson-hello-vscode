@@ -22,11 +22,11 @@ Web ブラウザで [公式サイト](https://code.visualstudio.com/) https://co
 ### macOS の場合
 
 zip ファイルがダウンロードされるため、ファイルを解凍します。  
-解凍したファイル `Visual Studio Code` を選択し、`ドラッグ&ドロップ`で**アプリケーション ディレクトリにファイルをコピー**します。
+解凍したファイル `VSCode` を選択し、`ドラッグ&ドロップ`で**アプリケーション ディレクトリにファイルをコピー**します。
 
 ![](img/install_vscode_on_macos.png)
 
-インストールが完了したら、Visual Studio Code を起動し、**F1** キーを押してコマンドパレットを開きます。  
+インストールが完了したら、VSCode を起動し、**F1** キーを押してコマンドパレットを開きます。  
 コマンドパレット内で、`Install` と入力し、表示されるコマンド **Shell Command: Install 'code' Command in PATH** を選択してください。
 
 ![](img/install_code_command_macos.png)
@@ -50,7 +50,7 @@ https://code.visualstudio.com/docs/setup/linux
 
 1. アクティビティーバー（画面左端のタブメニュー）から**拡張機能タブを選択**します。
 2. サイドバー（画面左側のエリア）にある `Search Extensions in Marketplace` 欄に **japanese** を入力します。
-3. サイドバー中に `Japanese Language Pack for Visual Studio Code` という項目が出てくるので選択します。右側に拡張機能の詳細が表示されるので、**インストール** ボタンを選択します。
+3. サイドバー中に `Japanese Language Pack for VSCode` という項目が出てくるので選択します。右側に拡張機能の詳細が表示されるので、**インストール** ボタンを選択します。
 4. 通知ポップアップ（画面右下）に `Would you like to change VS Code's UI language to Japanese and restart?` と表示されるため、**Yes** を選択します。
 5. 再起動を促すポップアップが表示された場合は、**再起動** を選択します。
 

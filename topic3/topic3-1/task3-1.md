@@ -1,5 +1,5 @@
-# 課題 3 で変更する lemon について書かれた文章
+# 課題 3 で変更する cirrus について書かれた文章
 
-- lemon
-- lemon
-- lemon
+- cirrus
+- cirrus
+- cirrus

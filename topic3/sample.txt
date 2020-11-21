@@ -1,5 +1,5 @@
-visual studio code
-Visual Studio Code
+VSCode
+VSCode
 visualstudiocode
 VisualStudioCode
 vscode

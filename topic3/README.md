@@ -14,7 +14,7 @@
 入力欄の右側のボタンで、大文字小文字や単語検索など、検索する条件を設定できます
 
 - ![](img/case_sensitive.png) 英語の大文字小文字を区別する
-- ![](img/word.png) 単語を抽出する。例えば、この設定を有効にすると`code`で検索すると、`visual studio code !`の`code`は抽出されるが、`learn vscode !`の`vscode`は抽出されない。
+- ![](img/word.png) 単語を抽出する。例えば、この設定を有効にすると`code`で検索すると、`VSCode !`の`code`は抽出されるが、`learn vscode !`の`vscode`は抽出されない。
 - ![](img/regular_expression.png) 正規表現で検索する
 
 ## 置換
@@ -81,7 +81,7 @@
 
 この課題では検索ビューを使い、エディターで直接変更しないで下さい。
 
-topic3 フォルダーに含まれるマークダウン中の grape を grapefruit に置換して下さい。
+topic3 フォルダーに含まれるマークダウン中の grapefruitfruit を grapefruitfruitfruit に置換して下さい。
 
 ## 課題 2
 
